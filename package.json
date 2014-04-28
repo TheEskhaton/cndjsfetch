@@ -1,0 +1,12 @@
+{
+  "name": "CDNJSFetch",
+  "version": "0.0.0",
+  "description": "A simple library to dinamically load scripts from CDNJS",
+  "main": "cdnjsfetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alen Genzić",
+  "repository" : "https://github.com/TheEskhaton/cndjsfetch.git"
+  "license": "BSD-2-Clause"
+}
