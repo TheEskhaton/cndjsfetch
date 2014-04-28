@@ -48,7 +48,7 @@
                 });
             });
         }
-        //assume it is a string
+        //assume it is a single object
         else{
             insertScript(scripts, fn);
         }
