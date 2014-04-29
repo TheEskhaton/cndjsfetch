@@ -5,7 +5,7 @@
         <script>
             fetch([{name : 'jquery', version : '2.1.0'},
             {name: 'underscore.js', version :'1.6.0', filename: 'underscore-min'},
-            {name: 'backbone.js', version : '1.1.2', filename: 'backbone-min' } 
+            {name: 'backbone.js', version : '1.1.2', filename: 'backboane-min', fallback: 'cdnjsfetch.js' } 
             ],
                 function(){
                     console.log('Loaded');

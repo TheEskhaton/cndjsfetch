@@ -1,7 +1,7 @@
 (function(global){
     /*
      * scripts - an array of script objects in the format 
-     * { name: 'scriptname', version: '1.0.1' , filename (optional): 'alternate-filename'}
+     * { name: 'scriptname', version: '1.0.1' , filename (optional): 'alternate-filename', fallback (optional): '/src/fallback.js'}
      *
      * fn - callback to be executed once all scripts are loaded
      */
@@ -17,6 +17,12 @@
             if (!scriptElem.readyState || (scriptElem.readyState === 'complete' || scriptElem.readyState === 'loaded')) {
                 scriptElem.onload = scriptElem.onreadystatechange = null;
                 fn();
+            }
+        };
+        scriptElem.onerror = function(){
+            if(script.fallback){
+                scriptElem.src = script.fallback;
+                scriptElem.onerror = null;
             }
         };
     };
